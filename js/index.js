@@ -69,7 +69,12 @@ mainContent[1].textContent = siteContent["main-content"]["about-content"];mainCo
 const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 // Contact
-const contactH4 = document.querySelector('.contact');
+const contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent["contact"]["contact-h4"];
-const contactP = document.querySelector('.contact')
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent['contact']["address"];
+contactInfo[1].textContent = siteContent['contact']["phone"];
+contactInfo[2].textContent = siteContent['contact']["email"];
 // Footer
+const copyright = document.querySelector('footer');
+copyright.textContent = siteContent['footer']['copyright'];
