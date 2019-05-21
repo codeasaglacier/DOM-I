@@ -38,5 +38,43 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// Nav Bar
+const navBar = document.querySelectorAll("a");
+navBar[0].textContent = siteContent["nav"]["nav-item-0"];
+navBar[1].textContent = siteContent["nav"]["nav-item-1"];
+navBar[2].textContent = siteContent["nav"]["nav-item-2"];
+navBar[3].textContent = siteContent["nav"]["nav-item-3"];
+navBar[4].textContent = siteContent["nav"]["nav-item-4"];
+navBar[5].textContent = siteContent["nav"]["nav-item-5"];
+// Title Section
+const titleSectionH1 = document.querySelector("h1");
+titleSectionH1.textContent = siteContent["cta"]["h1"];
+const titleButton =  document.querySelector("button");
+titleButton.textContent = siteContent["cta"]["button"];
+const titleImg = document.getElementById("cta-img");
+titleImg.setAttribute('src', siteContent["cta"]["img-src"]);
+// Main Content Headers
+const mainTitles = document.querySelectorAll('h4');
+mainTitles[0].textContent = siteContent["main-content"]["features-h4"];
+mainTitles[1].textContent = siteContent["main-content"]["about-h4"];
+mainTitles[2].textContent = siteContent["main-content"]["services-h4"];mainTitles[3].textContent = siteContent["main-content"]["product-h4"];
+mainTitles[4].textContent = siteContent["main-content"]["vision-h4"];
+// Main Content Paragraphs
+const mainContent = document.querySelectorAll('p');
+mainContent[0].textContent = siteContent["main-content"]["features-content"];
+mainContent[1].textContent = siteContent["main-content"]["about-content"];mainContent[2].textContent = siteContent["main-content"]["services-content"];mainContent[3].textContent = siteContent["main-content"]["product-content"];mainContent[4].textContent = siteContent["main-content"]["vision-content"];
+// Middle Img
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+// Contact
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+const contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent['contact']["address"];
+contactInfo[1].textContent = siteContent['contact']["phone"];
+contactInfo[2].textContent = siteContent['contact']["email"];
+// Footer
+const copyright = document.querySelector('footer');
+copyright.textContent = siteContent['footer']['copyright'];
