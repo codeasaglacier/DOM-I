@@ -50,6 +50,19 @@ navLinks.forEach((navLink) => {
   navLink.style.color = "green"
 })
 
+const addNav = document.querySelector("nav")
+
+const newNav = document.createElement("a")
+newNav.textContent = "New Nav"
+newNav.style.color = "blue"
+
+const newNewNav = document.createElement("a")
+newNewNav.textContent = "NewNew Nav"
+newNewNav.style.color = "maroon"
+
+addNav.appendChild(newNav)
+addNav.prepend(newNewNav)
+
 //CTA
 const callToText = document.querySelector("h1")
 callToText.innerHTML = "DOM <br> Is <br> Awesome"
