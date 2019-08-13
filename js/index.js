@@ -38,43 +38,64 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-const logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img")
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Nav
+const navLinks = document.querySelectorAll('a')
+navLinks.forEach((navLink, index) => {
+  navLink.textContent = siteContent["nav"][`nav-item-${index+1}`]
+})
+navLinks.forEach((navLink) => {
+  navLink.style.color = "green"
+})
+
+//CTA
+const callToText = document.querySelector("h1")
+callToText.innerHTML = "DOM <br> Is <br> Awesome"
+
+const callToBtn = document.querySelector("button")
+callToBtn.textContent = siteContent["cta"]["button"]
+
+const callToImg = document.querySelector("#cta-img")
+callToImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// Main & Bottom Content
+const headings = document.querySelectorAll(".main-content h4")
+const headingArr = ["features", "about", "services", "product", "vision"]
+headings.forEach((heading, index)=>{
+heading.textContent = siteContent["main-content"][headingArr[index]+"-h4"]
+})
+
+const midImg = document.querySelector("#middle-img")
+midImg.setAttribute("src", siteContent['main-content']['middle-img-src'])
+
+const textCont = document.querySelectorAll(".text-content p")
+textCont.forEach((heading, index)=>{
+  heading.textContent = siteContent["main-content"][headingArr[index]+"-content"]
+})
+
+// Contact
+const cnctH4 = document.querySelector(".contact h4")
+cnctH4.textContent = siteContent["contact"]["contact-h4"]
+
+const cnct = document.querySelectorAll(".contact p")
+cnct[0].innerHTML = "123 Way 456 Street<br>Somewhere, USA"
+cnct[1].textContent = siteContent["contact"]["phone"]
+cnct[2].textContent = siteContent["contact"]["email"]
+
+//Footer
+const foot = document.querySelector("footer p")
+foot.textContent = siteContent["footer"]["copyright"]
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const callToHeading = siteContent.cta.h1.split(" ");
+// callToText.querySelector("h1").textContent =
+//   callToHeading[0] + "\n" + callToHeading[1] + "\n" + callToHeading[2];
+// callToText.querySelector("h1").style.whiteSpace = "pre-line";
 
 
 
