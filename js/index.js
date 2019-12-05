@@ -48,21 +48,70 @@ nav.forEach((nav, index) => {
   nav.style.color = 'green'
 })
 
+  const addNav = document.querySelector("nav")
+
+  const newNav = document.createElement("a")
+  newNav.textContent = "New Nav"
+  newNav.style.color = "blue"
+
+  const newNewNav = document.createElement("a")
+  newNewNav.textContent = "NewNew Nav"
+  newNewNav.style.color = "maroon"
+
+  addNav.appendChild(newNav)
+  addNav.prepend(newNewNav)
+
 //CTA
 const hOne = document.querySelector('h1')
 const h1T = siteContent.cta.h1
 hOne.textContent = h1T
 hOne.style.width = '30rem'
 hOne.style.wordSpacing = '30rem'
-
-// innerHTML = "DOM <br> Is <br> Awesome"
+hOne.style.color = 'green'
 
 const getS = document.querySelector('button')
 getS.textContent = siteContent.cta.button
 
+
 const ctaI = document.getElementById('cta-img')
 ctaI.src = siteContent.cta["img-src"]
 
+// Main & Bottom Content
+const headings = document.querySelectorAll(".main-content h4")
+const headingArr = ["features", "about", "services", "product", "vision"]
+headings.forEach((heading, index)=>{
+heading.textContent = siteContent["main-content"][headingArr[index]+"-h4"]
+})
+
+const midImg = document.querySelector("#middle-img")
+midImg.setAttribute("src", siteContent['main-content']['middle-img-src'])
+
+const textCont = document.querySelectorAll(".text-content p")
+textCont.forEach((heading, index)=>{
+  heading.textContent = siteContent["main-content"][headingArr[index]+"-content"]
+})
+
+// Contact
+const cnctH4 = document.querySelector(".contact h4")
+cnctH4.textContent = siteContent["contact"]["contact-h4"]
+
+const cnct = document.querySelectorAll(".contact p")
+cnct[0].innerHTML = "123 Way 456 Street<br>Somewhere, USA"
+cnct[1].textContent = siteContent["contact"]["phone"]
+cnct[2].textContent = siteContent["contact"]["email"]
+
+//Footer
+const foot = document.querySelector("footer p")
+foot.textContent = siteContent["footer"]["copyright"]
+
+
+
+
+
+// const callToHeading = siteContent.cta.h1.split(" ");
+// callToText.querySelector("h1").textContent =
+//   callToHeading[0] + "\n" + callToHeading[1] + "\n" + callToHeading[2];
+// callToText.querySelector("h1").style.whiteSpace = "pre-line";
 
 
 
