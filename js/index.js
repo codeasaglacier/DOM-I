@@ -41,8 +41,27 @@ const siteContent = {
 const logo = document.getElementById("logo-img")
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Nav
+const nav = document.querySelectorAll('a')
+nav.forEach((nav, index) => {
+  nav.textContent = siteContent['nav'][`nav-item-${index+1}`]
+  nav.style.color = 'green'
+})
 
+//CTA
+const hOne = document.querySelector('h1')
+const h1T = siteContent.cta.h1
+hOne.textContent = h1T
+hOne.style.width = '30rem'
+hOne.style.wordSpacing = '30rem'
 
+// innerHTML = "DOM <br> Is <br> Awesome"
+
+const getS = document.querySelector('button')
+getS.textContent = siteContent.cta.button
+
+const ctaI = document.getElementById('cta-img')
+ctaI.src = siteContent.cta["img-src"]
 
 
 
